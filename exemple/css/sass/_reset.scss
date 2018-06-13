@@ -1,0 +1,55 @@
+// Reset
+abbr, address, article, aside, audio, b, blockquote, body, button, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, input, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, select, small, span, strong, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, tr, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: 0;
+    vertical-align: baseline;
+    background: 0 0;
+    font-size: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	background: none;
+	border: 0 none;
+	color: inherit;
+	display: block;
+	float: none;
+	font-family: "ARS",Arial, sans-serif;
+	line-height: 1.2;
+	padding: 0;
+}
+
+strong {
+	font-weight: 700;
+}
+
+em {
+	font-style: italic;
+}
+
+// Default
+* {
+	box-sizing: border-box;
+}
+
+::after,
+::before {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-size: 100%;
+	margin: 0;
+}
+
+body {
+	font-family: "ARS",Arial, sans-serif;
+	font-size: 16px;
+}

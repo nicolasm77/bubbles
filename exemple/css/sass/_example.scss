@@ -1,0 +1,27 @@
+body{
+    padding:50px 0;
+}
+
+.conversation{
+    max-width:500px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding:30px;
+    border:1px solid $grey;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-size: cover;
+
+    & + &{
+        margin-top:50px;
+    }
+
+    .bubble:nth-child(odd){
+        align-self:flex-end;
+    }
+
+    .bubble + .bubble{
+        margin-top:50px;
+    }
+}
