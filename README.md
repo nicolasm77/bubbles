@@ -47,6 +47,8 @@ Donne à la bulle un background bleu (et force le coin supérieur droit à être
 #### bubble--transparent
 Permet à la bulle d'êter semi-transparente (dans le cas où il y a une image de fond dérrieère celle-ci)
 
+
+
 ### Modificateurs
 #### bubble--rounded
 Radius plus important
@@ -63,12 +65,16 @@ Force le coin supérieur droit à être carré
 #### bubble--color-orange
 Met le texte de la bulle en orange
 
+
+
 ### border
 #### bubble--border-orange
 Ajoute une border orange
 
 #### bubble--border-white
 Ajoute une border blanche
+
+
 
 ### Cas spécifiques
 #### bubble--picto
