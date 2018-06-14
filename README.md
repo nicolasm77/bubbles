@@ -1,4 +1,4 @@
-# bubbles
+# BUBBLES
 
 ## HTML
 
@@ -34,41 +34,45 @@
 
 ## Class
 
-### bubble--rounded
-Radius plus important
-
-### bubble--elevated
-Ajoute une légère ombre
-
-### bubble--color-orange
-Met le texte de la bulle en orange
-
-### bubble--bg-orange
+### Background
+#### bubble--bg-orange
 Donne à la bulle un background orange (et force le coin supérieur gauche à être carré)
 
-### bubble--bg-white
+#### bubble--bg-white
 Donne à la bulle un background blanc et le texte en orange
 
-### bubble--bg-blue
+#### bubble--bg-blue
 Donne à la bulle un background bleu (et force le coin supérieur droit à être carré)
 
-### bubble--transparent
+#### bubble--transparent
 Permet à la bulle d'êter semi-transparente (dans le cas où il y a une image de fond dérrieère celle-ci)
 
-### bubble--border-orange
-Ajoute une border orange
+### Modificateurs
+#### bubble--rounded
+Radius plus important
 
-### bubble--border-white
-Ajoute une border blanche
+#### bubble--elevated
+Ajoute une légère ombre
 
-### bubble--corner-left
+#### bubble--corner-left
 Force le coin supérieur gauche à être carré
 
-### bubble--corner-right
+#### bubble--corner-right
 Force le coin supérieur droit à être carré
 
-### bubble--picto
+#### bubble--color-orange
+Met le texte de la bulle en orange
+
+### border
+#### bubble--border-orange
+Ajoute une border orange
+
+#### bubble--border-white
+Ajoute une border blanche
+
+### Cas spécifiques
+#### bubble--picto
 Pour les bulles qui contiennent un picto svg + un petit texte centrer
 
-### bubble--bbloc && bubble--bbloc-orange
+#### bubble--bbloc et bubble--bbloc-orange
 Affiche le "b bloc" dans le coin supérieur gauche de la bulle
