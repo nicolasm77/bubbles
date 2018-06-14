@@ -36,16 +36,16 @@
 
 ### Background
 #### bubble--bg-orange
-Donne à la bulle un background orange (et force le coin supérieur gauche à être carré)
+    Donne à la bulle un background orange (et force le coin supérieur gauche à être carré)
 
 #### bubble--bg-white
-Donne à la bulle un background blanc et le texte en orange
+    Donne à la bulle un background blanc et le texte en orange
 
 #### bubble--bg-blue
-Donne à la bulle un background bleu (et force le coin supérieur droit à être carré)
+    Donne à la bulle un background bleu (et force le coin supérieur droit à être carré)
 
 #### bubble--transparent
-Permet à la bulle d'êter semi-transparente (dans le cas où il y a une image de fond dérrieère celle-ci)
+    Permet à la bulle d'êter semi-transparente (dans le cas où il y a une image de fond dérrieère celle-ci)
 
 
 
