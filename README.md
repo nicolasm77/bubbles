@@ -51,34 +51,34 @@
 
 ### Modificateurs
 #### bubble--rounded
-Radius plus important
+    Radius plus important
 
 #### bubble--elevated
-Ajoute une légère ombre
+    Ajoute une légère ombre
 
 #### bubble--corner-left
-Force le coin supérieur gauche à être carré
+    Force le coin supérieur gauche à être carré
 
 #### bubble--corner-right
-Force le coin supérieur droit à être carré
+    Force le coin supérieur droit à être carré
 
 #### bubble--color-orange
-Met le texte de la bulle en orange
+    Met le texte de la bulle en orange
 
 
 
 ### border
 #### bubble--border-orange
-Ajoute une border orange
+    Ajoute une border orange
 
 #### bubble--border-white
-Ajoute une border blanche
+    Ajoute une border blanche
 
 
 
 ### Cas spécifiques
 #### bubble--picto
-Pour les bulles qui contiennent un picto svg + un petit texte centrer
+    Pour les bulles qui contiennent un picto svg + un petit texte centrer
 
 #### bubble--bbloc et bubble--bbloc-orange
-Affiche le "b bloc" dans le coin supérieur gauche de la bulle
+    Affiche le "b bloc" dans le coin supérieur gauche de la bulle
