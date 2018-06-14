@@ -67,7 +67,7 @@
 
 
 
-### border
+### Border
 #### bubble--border-orange
     Ajoute une border orange
 
