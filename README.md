@@ -52,8 +52,8 @@
 
 
 ### Modificateurs
-#### bubble--rounded
-    Radius plus important
+#### bubble--less-rounded
+    Radius moins important
 
 #### bubble--elevated
     Ajoute une légère ombre

@@ -5,8 +5,10 @@
   <meta charset="utf-8">
 
   <title>Les bulles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
-  <link rel="stylesheet" href="css/main.css">
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
+  <link rel="stylesheet" href="../dist/main.css">
   <link rel="stylesheet" href="css/demo.css">
 </head>
 
@@ -21,7 +23,15 @@
         <div class="bubble bubble--bg-orange bubble--bbloc bubble--elevated">
             <div class="bubble__container">
                 Bien sûr&nbsp;!<br>
-                Nous vous<br> en proposons<br> un pour 30€<br> par mois.
+                Nous vous<br> en proposons<br> un pour 30€ par mois.
+            </div>
+        </div>
+        <div class="bubble bubble--bg-orange bubble--bbloc bubble--elevated">
+            <div class="bubble__container">
+                Pas de soucis ! <br>
+                Commandez-le en ligne et venez <br>
+                récupérer votre produit 1H après <br>
+                en magasin.
             </div>
         </div>
     </div>
@@ -60,12 +70,12 @@
     </div>
 
     <div class="conversation" style="background-image: url('assets/headband.jpg')">
-        <div class="bubble bubble--bg-blue bubble--transparent bubble--rounded">
+        <div class="bubble bubble--bg-blue bubble--transparent">
             <div class="bubble__container">
                 Et si j'ai une<br> question<br> urgente&nbsp;?
             </div>
         </div>
-        <div class="bubble bubble--bg-orange bubble--transparent bubble--bbloc bubble--rounded">
+        <div class="bubble bubble--bg-orange bubble--transparent bubble--bbloc">
             <div class="bubble__container">
                 Nous avons la réponse : <br>
                 <b>l'App Boulanger</b>
@@ -74,18 +84,18 @@
     </div>
 
     <div class="conversation" style="background-image: url('assets/headband.jpg');background-position: right center;">
-        <div class="bubble bubble--bg-white bubble--corner-right bubble--transparent bubble--rounded">
+        <div class="bubble bubble--bg-white bubble--corner-right bubble--transparent">
             <div class="bubble__container">
                 &Agrave; l'aide !
             </div>
         </div>
-        <div id="bulle1" class="bubble bubble--border-white bubble--corner-left bubble--bbloc bubble--rounded">
+        <div id="bulle1" class="bubble bubble--border-white bubble--corner-left bubble--bbloc">
             <div class="bubble__container">
                 Vous allez adorer
             </div>
         </div>
     </div>
     <script src="js/app.jquery.js"></script>
-    <script src="js/bubbles.js"></script>
+    <script src="../dist/bubbles.js"></script>
 </body>
 </html>

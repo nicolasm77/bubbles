@@ -12,14 +12,6 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader',
-                options: {
-                    presets: ['env']
-                }
-            },
-            {
                 test: /\.html$/,
                 use: {
                     loader: 'html-loader',
@@ -48,13 +40,14 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.svg$/,
+                use: {
+			        loader: 'svg-url-loader',
+			        options: {}
+			    }
             }
         ],
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './index.html',
-            inject: true
-        })
-    ]
+    }
 };
