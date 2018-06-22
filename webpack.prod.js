@@ -8,9 +8,12 @@ const buildPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
     devtool: 'source-map',
-    entry: './src/index.js',
+    entry: {
+        main: './src/index.js',
+        anims: './src/anims.js'
+    },
     output: {
-        filename: 'bubbles.js',
+        filename: '[name].js',
         path: buildPath
     },
     module: {
@@ -46,9 +49,9 @@ module.exports = {
             {
                 test: /\.svg$/,
                 use: {
-			        loader: 'svg-url-loader',
-			        options: {}
-			    }
+                    loader: 'svg-url-loader',
+                    options: {}
+                }
             }
         ]
     },

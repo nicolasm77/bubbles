@@ -2,12 +2,21 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const buildPath = path.resolve(__dirname, 'dist');
+
 module.exports = {
     devtool: 'eval-cheap-module-source-map',
-    entry: './src/index.js',
+    entry: {
+        main: './src/index.js',
+        anims: './src/anims.js'
+    },
+    output: {
+        filename: '[name].js',
+        path: buildPath
+    },
     devServer: {
         port: 8080,
-        contentBase: path.join(__dirname, "dist")
+        contentBase: path.resolve(__dirname)
     },
     module: {
         rules: [
@@ -23,6 +32,13 @@ module.exports = {
             {
                 test: /\.(scss|css)$/,
                 use: [
+                    {
+                        // creates style tag in html
+                        loader: "style-loader",
+                        options: {
+                            sourceMap: true
+                        }
+                    },
                     {
                         // translates CSS into CommonJS
                         loader: "css-loader",
@@ -49,5 +65,11 @@ module.exports = {
 			    }
             }
         ],
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            inject: true
+        })
+    ]
 };

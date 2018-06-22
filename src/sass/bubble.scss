@@ -16,8 +16,8 @@ $smaller: "(max-width: 399px)";
     overflow: hidden;
     font-size:22px;
     line-height: 26px;
-    -webkit-transition:all 0.5s;
-    transition:all 0.5s;
+    -webkit-transition:border-radius 0.5s;
+    transition:border-radius 0.5s;
     border-radius:25%/50%;
 
     @media #{$notDesktop}{
@@ -186,6 +186,12 @@ $smaller: "(max-width: 399px)";
                 }
             }
         }
+
+        &.bubble--loading{
+            .bubble__container{
+                padding:26px 20px 16px 65px;
+            }
+        }
     }
 
     &--bbloc-orange .bubble__container::before{
@@ -205,13 +211,16 @@ $smaller: "(max-width: 399px)";
             padding: 14px 27px 16px 18px;
         }
     }
+}
 
-    &__parent{
+.conversation{
+    &__root{
         display:flex;
         flex-direction:column;
         align-items: flex-end;
+        position: relative;
 
-        .bubble--bg-orange {
+        .bubble--bg-orange, .bubble--align-left {
             align-self: flex-start;
         }
 
@@ -226,5 +235,84 @@ $smaller: "(max-width: 399px)";
                 margin-top: 14px;
             }
         }
+    }
+
+    &__textarea{
+        position: absolute;
+        width:100%;
+        bottom: 0;
+        left:0;
+        border:5px solid #eaeaea;
+        padding: 5px 10px;
+        background-color: $white;
+        font-size: 15px;
+    }
+}
+
+.conversation2{
+    background-size: cover;
+    margin:70px 0;
+
+    .conversation{
+        border:0 none;
+        padding:5% 0;
+    }
+}
+
+$radius : 8px;
+@keyframes loading {
+    0% {top:0;}
+    30% {top:-$radius;}
+    60% {top:0}
+}
+.loader{
+    position: relative;
+    display: block;
+    margin:0 (8px + $radius);
+
+    span{
+        display: block;
+        position: relative;
+        width: $radius;
+        height: $radius;
+        border-radius: 50%;
+        background-color: $white;
+        animation-name: loading;
+        animation-duration: 1s;
+        animation-delay: 0.25s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+    }
+
+
+    &::before{
+        position: absolute;
+        content:"";
+        width: $radius;
+        height: $radius;
+        border-radius: 50%;
+        background-color: $white;
+        left: -(8px + $radius);
+        animation-name: loading;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+    }
+
+    &::after{
+        position: absolute;
+        content:"";
+        width: $radius;
+        height: $radius;
+        border-radius: 50%;
+        top:0;
+        background-color: $white;
+        margin-right:10px;
+        left: (8px + $radius);
+        animation-name: loading;
+        animation-duration: 1s;
+        animation-delay: 0.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
     }
 }
