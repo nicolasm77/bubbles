@@ -16,8 +16,8 @@ $smaller: "(max-width: 399px)";
     overflow: hidden;
     font-size:22px;
     line-height: 26px;
-    -webkit-transition:border-radius 0.5s;
-    transition:border-radius 0.5s;
+    //transition:border-radius 0.3s;
+    //transition:color 0.3s 0.3s;
     border-radius:25%/50%;
 
     @media #{$notDesktop}{
@@ -188,8 +188,9 @@ $smaller: "(max-width: 399px)";
         }
 
         &.bubble--loading{
-            .bubble__container{
-                padding:26px 20px 16px 65px;
+            .loader{
+                visibility: visible;
+                opacity: 1;
             }
         }
     }
@@ -237,6 +238,13 @@ $smaller: "(max-width: 399px)";
         }
     }
 
+    &--animate,
+    &--animate-simple{
+        .bubble{
+            opacity: 0;
+        }
+    }
+
     &__textarea{
         position: absolute;
         width:100%;
@@ -266,9 +274,13 @@ $radius : 8px;
     60% {top:0}
 }
 .loader{
-    position: relative;
+    position: absolute;
     display: block;
-    margin:0 (8px + $radius);
+    top:26px;
+    left: 80px;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.3s, opacity 0.3s;
 
     span{
         display: block;

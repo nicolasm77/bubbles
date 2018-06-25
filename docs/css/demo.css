@@ -246,9 +246,6 @@ body {
 .conversation + .conversation {
   margin-top: 50px;
 }
-.conversation .bubble:nth-child(odd) {
-  align-self: flex-end;
-}
 .conversation .bubble + .bubble {
   margin-top: 50px;
 }

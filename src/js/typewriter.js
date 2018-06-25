@@ -388,7 +388,6 @@
 						self._rerunCalledEvents();
 					}
 				}else{
-					console.log("MERDE")
 					if(self.options.callback && typeof self.options.callback == "function") self.options.callback();
 				}
 			}, 200);
@@ -452,6 +451,7 @@
 			if(self.options.devMode) {
 				console.log('Typed', item_to_type);
 			}
+			if(self.options.typing && typeof self.options.typing == "function") self.options.typing();
 		}, typing_speed);
 	};
 
@@ -466,6 +466,7 @@
 			char_element.id = char_id;
 			char_element.className = char_class_name + ' typewriter-item-' + i;
 			char_element.innerHTML = chars_array[i];
+			char_element.innerHTML = chars_array[i]=="#"?"<br>":chars_array[i];
 			chars_html_wrap_array.push({
 				id: char_id,
 				el: char_element

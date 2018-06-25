@@ -17,10 +17,6 @@ body{
         margin-top:50px;
     }
 
-    .bubble:nth-child(odd){
-        align-self:flex-end;
-    }
-
     .bubble + .bubble{
         margin-top:50px;
     }
