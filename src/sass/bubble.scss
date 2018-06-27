@@ -1,121 +1,120 @@
-$orange : #fd5300;
-$blue : #009db8;
-$grey : #434748;
-$white : #ffffff;
-
+$orange: #fd5300;
+$blue: #009db8;
+$grey: #434748;
+$white: #ffffff;
 $notDesktop: "(max-width: 999px)";
 $mobile: "(max-width: 639px)";
 $smaller: "(max-width: 399px)";
 
 
-.bubble{
-    color:$white;
-    font-family: "ARS", Arial, sans-serif;
+.bubble {
     position: relative;
     display: inline-block;
     overflow: hidden;
-    font-size:22px;
+    color: $white;
+    font-family: "ARS", Arial, sans-serif;
+    font-size: 22px;
     line-height: 26px;
-    //transition:border-radius 0.3s;
+
+//transition:border-radius 0.3s;
     //transition:color 0.3s 0.3s;
-    border-radius:25%/50%;
-
-    @media #{$notDesktop}{
-        font-size: 16px;
-        line-height: 22px;
+    border-radius: 25%/50%;
+    @media #{$notDesktop} {
+    	font-size: 16px;
+    	line-height: 22px;
     }
-    @media #{$mobile}{
-        font-size: 13px;
-        line-height: 19px;
+    @media #{$mobile} {
+    	font-size: 13px;
+    	line-height: 19px;
     }
-    @media #{$smaller}{
-        font-size: 12px;
-        line-height: 14px;
-    }
-
-    &--less-rounded{
-        border-radius:25%;
+    @media #{$smaller} {
+    	font-size: 12px;
+    	line-height: 14px;
     }
 
-    &--elevated{
-        -webkit-box-shadow : 7px 7px 20px 0 rgba(0,0,0,0.1);
-        box-shadow : 7px 7px 20px 0 rgba(0,0,0,0.1);
+    &--less-rounded {
+    	border-radius: 25%;
     }
 
-    &--color-orange{
-        color:$orange;
+    &--elevated {
+    	-webkit-box-shadow: 7px 7px 20px 0 rgba(0,0,0,0.1);
+    	box-shadow: 7px 7px 20px 0 rgba(0,0,0,0.1);
     }
 
-    &--picto{
-        text-align: center;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        //min-height: 275px;
-        border-radius:25%;
-        border-top-left-radius: 0 !important;
-
-        .bubble__container{
-            padding: 35px 30px;
-        }
-
-        svg{
-            display: block;
-            width: 90px;
-            height: auto;
-            margin:0 auto 25px;
-        }
+    &--color-orange {
+    	color: $orange;
     }
 
-    &--bg-orange{
-        background-color: $orange;
-        border-top-left-radius: 0 !important;
+    &--picto {
+    	-ms-flex-direction: column;
+    	flex-direction: column;
+    	-webkit-box-pack: center;
+    	-ms-flex-pack: center;
+    	justify-content: center;
+    	display: -webkit-box;
+    	display: -ms-flexbox;
+    	display: flex;
+    	text-align: center;
+//min-height: 275px;
+    	border-radius: 25%;
+    	border-top-left-radius: 0 !important;
 
-        &.bubble--transparent::after{
-            background-color: $orange;
-        }
+    	-webkit-box-direction: normal;
+    	-webkit-box-orient: vertical;
+    	.bubble__container {
+    		padding: 35px 30px;
+    	}
+
+    	svg {
+    		display: block;
+    		width: 90px;
+    		height: auto;
+    		margin: 0 auto 25px;
+    	}
     }
 
-    &--bg-white{
-        background-color: $white;
-        color: $orange;
+    &--bg-orange {
+    	background-color: $orange;
+    	border-top-left-radius: 0 !important;
 
-        &.bubble--transparent::after{
-            background-color: $white;
-        }
+    	&.bubble--transparent::after {
+    		background-color: $orange;
+    	}
     }
 
-    &--bg-blue{
-        background-color: $blue;
-        border-top-right-radius: 0 !important;
+    &--bg-white {
+    	color: $orange;
+    	background-color: $white;
 
-        &.bubble--transparent::after{
-            background-color: $blue;
-        }
+    	&.bubble--transparent::after {
+    		background-color: $white;
+    	}
     }
 
-    &--transparent{
-        background-color: transparent;
+    &--bg-blue {
+    	background-color: $blue;
+    	border-top-right-radius: 0 !important;
 
-        &::after{
-            content:"";
-            z-index: 0;
-            position: absolute;
-            top:0;
-            left: 0;
-            width:100%;
-            height:100%;
-            opacity: 0.8;
-        }
+    	&.bubble--transparent::after {
+    		background-color: $blue;
+    	}
+    }
 
-        /*@supports (mix-blend-mode: multiply){
+    &--transparent {
+    	background-color: transparent;
+
+    	&::after {
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		z-index: 0;
+    		width: 100%;
+    		height: 100%;
+    		content: "";
+    		opacity: 0.8;
+    	}
+
+    	/*@supports (mix-blend-mode: multiply){
             &::before{
                 content:"";
                 z-index: 0;
@@ -134,197 +133,204 @@ $smaller: "(max-width: 399px)";
         }*/
     }
 
-    &--border-orange{
-        border:3px solid $orange;
+    &--border-orange {
+    	border: 3px solid $orange;
     }
 
-    &--border-white{
-        border:3px solid $white;
+    &--border-white {
+    	border: 3px solid $white;
     }
 
-    &--corner-left{
-        border-top-left-radius: 0 !important;
+    &--corner-left {
+    	border-top-left-radius: 0 !important;
     }
 
-    &--corner-right{
-        border-top-right-radius: 0 !important;
+    &--corner-right {
+    	border-top-right-radius: 0 !important;
     }
 
     &--bbloc,
-    &--bbloc-orange{
-        .bubble__container{
-            padding-top:calc(28px/2 + 28px + 28px/2);
-            padding-left:calc(40px/2 + 28px/2);
+    &--bbloc-orange {
+    	.bubble__container {
+    		padding-top: calc(28px/2 + 28px + 28px/2);
+    		padding-left: calc(40px/2 + 28px/2);
 
-            &::before{
-                content:"";
-                position: absolute;
-                top:12px;
-                left: 12px;
-                width:40px;
-                height: 30px;
-                background-image: url("../svg/b-bloc.svg");
-                background-repeat: no-repeat;
-                background-size: 100% auto;
-            }
+    		&::before {
+    			position: absolute;
+    			top: 12px;
+    			left: 12px;
+    			width: 40px;
+    			height: 30px;
+    			content: "";
+    			background-image: url("../svg/b-bloc.svg");
+    			background-repeat: no-repeat;
+    			background-size: 100% auto;
+    		}
 
-            @media #{$mobile}{
-                padding-top: 45px;
-                padding-left: 30px;
-                padding-bottom:20px;
+    		@media #{$mobile} {
+    			padding-top: 45px;
+    			padding-bottom: 20px;
+    			padding-left: 30px;
 
-                &::before{
-                    width: 32px;
-                }
-            }
+    			&::before {
+    				width: 32px;
+    			}
+    		}
 
-            @media #{$smaller}{
-                padding-top: 36px;
+    		@media #{$smaller} {
+    			padding-top: 36px;
 
-                &::before{
-                    width: 26px;
-                }
-            }
-        }
+    			&::before {
+    				width: 26px;
+    			}
+    		}
+    	}
 
-        &.bubble--loading{
-            .loader{
-                visibility: visible;
-                opacity: 1;
-            }
-        }
+    	&.bubble--loading {
+    		.loader {
+    			opacity: 1;
+    			visibility: visible;
+    		}
+    	}
     }
 
-    &--bbloc-orange .bubble__container::before{
-        background-image: url("../svg/b-bloc_orange.svg");
+    &--bbloc-orange .bubble__container::before {
+    	background-image: url("../svg/b-bloc_orange.svg");
     }
 
-    &__container{
-        padding:35px 30px 30px 35px;
-        position: relative;
-        z-index: 10;
+    &__container {
+    	position: relative;
+    	z-index: 10;
+    	padding: 35px 30px 30px 35px;
 
-        @media #{$mobile}{
-            padding: 25px 30px;
-        }
+    	@media #{$mobile} {
+    		padding: 25px 30px;
+    	}
 
-        @media #{$smaller}{
-            padding: 14px 27px 16px 18px;
-        }
+    	@media #{$smaller} {
+    		padding: 14px 27px 16px 18px;
+    	}
     }
 }
 
-.conversation{
-    &__root{
-        display:flex;
-        flex-direction:column;
-        align-items: flex-end;
-        position: relative;
+.conversation {
+    &__root {
+    	position: relative;
+    	align-items: flex-end;
+    	flex-direction: column;
+    	display: flex;
 
-        .bubble--bg-orange, .bubble--align-left {
-            align-self: flex-start;
-        }
+    	.bubble--bg-orange,
+    	.bubble--align-left {
+    		align-self: flex-start;
+    	}
 
-        .bubble + .bubble{
-            margin-top:30px;
+    	.bubble + .bubble {
+    		margin-top: 30px;
 
-            @media #{$mobile}{
-                margin-top: 20px;
-            }
+    		@media #{$mobile} {
+    			margin-top: 20px;
+    		}
 
-            @media #{$smaller}{
-                margin-top: 14px;
-            }
-        }
+    		@media #{$smaller} {
+    			margin-top: 14px;
+    		}
+    	}
     }
 
     &--animate,
-    &--animate-simple{
-        .bubble{
-            opacity: 0;
-        }
+    &--animate-simple {
+    	.bubble {
+    		opacity: 0;
+    	}
     }
 
-    &__textarea{
-        position: absolute;
-        width:100%;
-        bottom: 0;
-        left:0;
-        border:5px solid #eaeaea;
-        padding: 5px 10px;
-        background-color: $white;
-        font-size: 15px;
+    &__textarea {
+    	position: absolute;
+    	bottom: 0;
+    	left: 0;
+    	width: 100%;
+    	padding: 5px 10px;
+    	font-size: 15px;
+    	background-color: $white;
+    	border: 5px solid #eaeaea;
     }
 }
 
-.conversation2{
+.conversation2 {
+    margin: 70px 0;
     background-size: cover;
-    margin:70px 0;
 
-    .conversation{
-        border:0 none;
-        padding:5% 0;
+    .conversation {
+    	padding: 5% 0;
+    	border: 0 none;
     }
 }
 
-$radius : 8px;
+$radius: 8px;
 @keyframes loading {
-    0% {top:0;}
-    30% {top:-$radius;}
-    60% {top:0}
+    0% {
+    	top: 0;
+    }
+    30% {
+    	top: -$radius;
+    }
+    60% {
+    	top: 0;
+    }
 }
-.loader{
+.loader {
     position: absolute;
-    display: block;
-    top:26px;
+    top: 26px;
     left: 80px;
+    display: block;
+    transition: visibility 0.3s, opacity 0.3s;
     opacity: 0;
     visibility: hidden;
-    transition: visibility 0.3s, opacity 0.3s;
 
-    span{
-        display: block;
-        position: relative;
-        width: $radius;
-        height: $radius;
-        border-radius: 50%;
-        background-color: $white;
-        animation-name: loading;
-        animation-duration: 1s;
-        animation-delay: 0.25s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-out;
+    span {
+    	position: relative;
+    	display: block;
+    	width: $radius;
+    	height: $radius;
+    	background-color: $white;
+    	border-radius: 50%;
+    	animation-delay: 0.25s;
+    	animation-duration: 1s;
+    	animation-iteration-count: infinite;
+    	animation-name: loading;
+    	animation-timing-function: ease-out;
     }
 
 
-    &::before{
-        position: absolute;
-        content:"";
-        width: $radius;
-        height: $radius;
-        border-radius: 50%;
-        background-color: $white;
-        left: -(8px + $radius);
-        animation-name: loading;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-out;
+    &::before {
+    	position: absolute;
+    	left: -(8px + $radius);
+    	width: $radius;
+    	height: $radius;
+    	content: "";
+    	background-color: $white;
+    	border-radius: 50%;
+    	animation-duration: 1s;
+    	animation-iteration-count: infinite;
+    	animation-name: loading;
+    	animation-timing-function: ease-out;
     }
 
-    &::after{
-        position: absolute;
-        content:"";
-        width: $radius;
-        height: $radius;
-        border-radius: 50%;
-        top:0;
-        background-color: $white;
-        margin-right:10px;
-        left: (8px + $radius);
-        animation-name: loading;
-        animation-duration: 1s;
-        animation-delay: 0.5s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-out;
+    &::after {
+    	position: absolute;
+    	top: 0;
+    	left: (8px + $radius);
+    	width: $radius;
+    	height: $radius;
+    	margin-right: 10px;
+    	content: "";
+    	background-color: $white;
+    	border-radius: 50%;
+    	animation-delay: 0.5s;
+    	animation-duration: 1s;
+    	animation-iteration-count: infinite;
+    	animation-name: loading;
+    	animation-timing-function: ease-out;
     }
 }

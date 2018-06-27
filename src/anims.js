@@ -1,6 +1,6 @@
 import scrollMonitor from "./js/scrollMonitor.js";
 import writer from "./js/typewriter.js";
-import { TweenLite, TimelineLite } from "gsap/all";
+import { TweenLite, TimelineLite, Expo } from "gsap/all";
 
 
 $j(".conversation--animate").each(function(){

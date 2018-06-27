@@ -29,6 +29,9 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
     "gsap": "^2.0.1"
   }
 }
