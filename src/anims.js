@@ -33,7 +33,6 @@ $j(".conversation--animate").each(function(){
                 console.log(tabAnimComplete,i, tabAnimComplete.indexOf(i-1)<0)
                 if(tabAnimComplete.indexOf(i-1)>-1){
                     tl.play();
-                    console.log("play")
                 }
             });
 
@@ -49,7 +48,6 @@ $j(".conversation--animate").each(function(){
                 tabAnimComplete.push(i);
                 if(tabOnViewport.indexOf(i+1)<0){
                     tl.pause();
-                    console.log("pause")
                 }else{
                     tl.play();
                 }
@@ -67,11 +65,9 @@ $j(".conversation--animate").each(function(){
                     bubble.calcRadius();
                 },
                 callback : function(){
-                    console.log("FINI")
                     tabAnimComplete.push(i);
                     if(tabOnViewport.indexOf(i+1)<0){
                         tl.pause();
-                        console.log("pause")
                     }else{
                         tl.play();
                     }
@@ -83,7 +79,6 @@ $j(".conversation--animate").each(function(){
                 tabOnViewport.push(i);
                 if(tabAnimComplete.indexOf(i-1)>-1){
                     tl.play();
-                    console.log("play")
                 }
             });
 
@@ -92,7 +87,6 @@ $j(".conversation--animate").each(function(){
             tl.call(function(){
                 typewriter.start();
             });
-
         }
     });
 
@@ -100,7 +94,7 @@ $j(".conversation--animate").each(function(){
         this.destroy();
         tl.play();
     });
-})
+});
 
 
 $j(".conversation--animate-simple").each(function(){
@@ -109,6 +103,7 @@ $j(".conversation--animate-simple").each(function(){
     $conversation.height($conversation.outerHeight())
 
     let tabOnViewport = [];
+    let tabTween = [];
     let tabAnimComplete = [];
 
     $conversation.find(".bubble").each(function(i){
@@ -118,27 +113,43 @@ $j(".conversation--animate-simple").each(function(){
 
         if(bubble.hasClass("bubble--bbloc") || bubble.hasClass("bubble--bbloc-orange")){
 
-            const tween = TweenLite.fromTo(bubble, speed1, {delay:delai,ease: Expo.easeOut, x: "-100%", alpha:0}, {alpha:1, x : "0%"}).pause();
+            const tween = TweenLite.fromTo(bubble, speed1, {delay:delai,ease: Expo.easeOut, x: "-100%", alpha:0}, {alpha:1, x : "0%", onComplete : function(){
+                tabAnimComplete.push(i);
+                if(tabOnViewport.indexOf(i+1)>-1){
+                    tabTween[i+1].play();
+                }
+            }});
+            tween.pause();
+            tabTween.push(tween);
 
             scrollMonitor.create(bubble.get(0), ($conversation.height()/-2)).enterViewport(function() {
                 this.destroy();
 
-                tween.play();
+                tabOnViewport.push(i);
+                if(tabAnimComplete.indexOf(i-1)>-1){
+                    tween.play();
+                }
             });
 
         }else{
 
-            const tween = TweenLite.fromTo(bubble, speed1, {delay:delai,ease: Expo.easeOut, x: "100%", alpha:0}, {alpha:1, x : "0%"}).pause();
+            const tween = TweenLite.fromTo(bubble, speed1, {delay:delai,ease: Expo.easeOut, x: "100%", alpha:0}, {alpha:1, x : "0%", onComplete : function(){
+                tabAnimComplete.push(i);
+                if(tabOnViewport.indexOf(i+1)>-1){
+                    tabTween[i+1].play();
+                }
+            }});
+            tween.pause();
+            tabTween.push(tween);
 
             scrollMonitor.create(bubble.get(0), ($conversation.height()/-2)).enterViewport(function() {
                 this.destroy();
-
-                tween.play();
+                tabOnViewport.push(i);
+                console.log(tabAnimComplete)
+                if(i == 0 || tabAnimComplete.indexOf(i-1)>-1){
+                    tween.play();
+                }
             });
         }
-    });
-
-    scrollMonitor.create($conversation.get(0), ($conversation.height()/-2)).enterViewport(function() {
-        this.destroy();
     });
 })
