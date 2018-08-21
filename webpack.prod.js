@@ -1,3 +1,7 @@
+/*
+VOIR LE FICHIER webpack.prod.js PRÉSENT DANS LE DOSSIER setup POUR UNE VERSION COMMENTÉE
+*/
+
 const path = require('path');
 
 const CleanWebpackPlugin = require('clean-webpack-plugin');

@@ -24,12 +24,12 @@ $smaller: "(max-width: 399px)";
     	line-height: 22px;
     }
     @media #{$mobile} {
-    	font-size: 13px;
-    	line-height: 19px;
+    	font-size: 15px;
+    	line-height: 20px;
     }
     @media #{$smaller} {
-    	font-size: 12px;
-    	line-height: 14px;
+    	font-size: 13px;
+    	line-height: 16px;
     }
 
     &--less-rounded {
@@ -187,7 +187,7 @@ $smaller: "(max-width: 399px)";
     	}
 
     	&.bubble--loading {
-    		.loader {
+    		.bubble__loader {
     			opacity: 1;
     			visibility: visible;
     		}
@@ -279,7 +279,7 @@ $radius: 8px;
     	top: 0;
     }
 }
-.loader {
+.bubble__loader {
     position: absolute;
     top: 26px;
     left: 80px;

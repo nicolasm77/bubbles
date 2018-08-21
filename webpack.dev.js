@@ -1,3 +1,7 @@
+/*
+VOIR LE FICHIER webpack.dev.js PRÉSENT DANS LE DOSSIER setup POUR UNE VERSION COMMENTÉE
+*/
+
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
