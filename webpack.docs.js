@@ -9,7 +9,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const buildPath = path.resolve(__dirname, 'docs');
-const stagingPath = "docs";
+const stagingPath = "";
 
 module.exports = {
 	devtool: '',
