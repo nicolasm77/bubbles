@@ -218,7 +218,7 @@
 						if (!1 === t.call(e[i], i, e[i])) break;
 				return e
 			},
-			trim: b && !b.call("\ufeff ") ? function (e) {
+			trim: b && !b.call("\ufeff ") ? function (e) {
 				return null == e ? "" : b.call(e)
 			} : function (e) {
 				return null == e ? "" : (e + "").replace(C, "")
@@ -4945,7 +4945,7 @@ function ($, undefined) {
 		})
 	}),
 	function (a) {
-		"function" == typeof define && define.amd ? define(["jquery"], a) : a(jQuery)
+		"function" == typeof define && define.amd ? a(jQuery) : a(jQuery)
 	}(function (a) {
 		! function () {
 			function b(a) {

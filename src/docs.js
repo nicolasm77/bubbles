@@ -1,4 +1,5 @@
-import jquery from "./doc/app.jquery.js";
+import $ from "jquery";
+$j = $.noConflict();
 
 import bubbles from "./index.js";
 import bubblesCSS from "./sass/bubble.scss";
