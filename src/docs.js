@@ -1,14 +1,9 @@
-import $ from "jquery";
-// window.$j = $.noConflict();
-console.log($.fn)
-// import bubbles from "./index.js";
+import "./doc/app.jquery.js";
+
+import bubbles from "./index.js";
 import bubblesCSS from "./sass/bubble.scss";
 
-// import anims from "./anims.js";
+import anims from "./anims.js";
 
 
 import docCSS from "./doc/sass/demo.scss";
-
-window.$j = $.noConflict();
-console.log(window.j$)
-console.log(j$)
