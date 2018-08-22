@@ -50,7 +50,7 @@ module.exports = {
 				options: {
 					name: '[name].[ext]',
 					outputPath: 'assets/',
-					publicPath: stagingPath + "/assets"
+					publicPath: stagingPath + "assets"
 				}
 			},
 			{
@@ -88,7 +88,7 @@ module.exports = {
 					options: {
 						name: '[name].[ext]',
 						outputPath: 'fonts/',
-						publicPath: stagingPath + "/fonts"
+						publicPath: stagingPath + "fonts"
 					}
 				}]
 			},
