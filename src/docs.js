@@ -1,6 +1,6 @@
 import $ from "jquery";
 // window.$j = $.noConflict();
-console.log($)
+console.log($.fn)
 // import bubbles from "./index.js";
 import bubblesCSS from "./sass/bubble.scss";
 
@@ -8,3 +8,7 @@ import bubblesCSS from "./sass/bubble.scss";
 
 
 import docCSS from "./doc/sass/demo.scss";
+
+window.$j = $.noConflict();
+console.log(window.j$)
+console.log(j$)
