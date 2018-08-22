@@ -1,5 +1,5 @@
 import $ from "jquery";
-$j = $.noConflict();
+window.$j = $.noConflict();
 
 import bubbles from "./index.js";
 import bubblesCSS from "./sass/bubble.scss";
