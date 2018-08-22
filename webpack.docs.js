@@ -88,7 +88,7 @@ module.exports = {
 					options: {
 						name: '[name].[ext]',
 						outputPath: 'fonts/',
-						publicPath: stagingPath + "fonts"
+						publicPath: "/bubbles/fonts"
 					}
 				}]
 			},
