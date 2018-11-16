@@ -15,8 +15,7 @@ module.exports = {
         anims: './src/anims.js'
     },
     output: {
-        filename: '[name].js',
-        path: buildPath
+        filename: '[name].js'
     },
     devServer: {
         port: 8080,
