@@ -23,8 +23,8 @@ $j(window).on("load", function () {
 
 		$conversation.find(".bubble").each(function (i) {
 			var bubble = $j(this);
-			var bubbleH = bubble.outerHeight();
-			var bubbleW = bubble.outerWidth();
+			var bubbleH = bubble.outerHeight()+1;
+			var bubbleW = bubble.outerWidth()+2;
 			var bubbleC = bubble.css("color");
 			var container = bubble.children(".bubble__container");
 			var decalage = (i == 0) ? "+=0" : "+=350";
@@ -56,7 +56,7 @@ $j(window).on("load", function () {
 					});
 				},
 				{
-					rootMargin : maxOffset(bubble)+"px"
+					rootMargin : maxOffset(bubble)+"px 0px"
 				});
 				observer.observe(bubble.get(0));
 
